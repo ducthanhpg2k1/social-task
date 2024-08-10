@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url("https://fonts.cdnfonts.com/css/sora-3?styles=80874,80875,80870,80871"); */
+
+@layer base {
+  :root {
+    --alpha-90: #ffffffe5;
+    /* brand-color */
+    --brand-50: #eefbf3;
+    --brand-100: #d5f6e0;
+    --brand-200: #afebc6;
+    --brand-300: #7bdaa6;
+    --brand-400: #45c281;
+    --brand-500: #26ba73;
+    --brand-600: #158652;
+    --brand-700: #106c44;
+    --brand-800: #105538;
+    --brand-900: #0e462f;
+    --brand-950: #06281b;
+    /*  */
+    /* neutral-color */
+    --neutral-50: #f8f9fb;
+    --neutral-100: #e7ecf1;
+    --neutral-200: #dee4e7;
+    --neutral-300: #c9d2d8;
+    --neutral-400: #b2bdc7;
+    --neutral-500: #9ea8b6;
+    --neutral-600: #7e899c;
+    --neutral-700: #747d8e;
+    --neutral-800: #5f6674;
+    --neutral-900: #50555f;
+    --neutral-950: #2f3237;
+    /*  */
+    /* info-color */
+    --info-50: #eef9ff;
+    --info-100: #dcf3ff;
+    --info-200: #b2eaff;
+    --info-300: #6ddaff;
+    --info-400: #20c8ff;
+    --info-500: #00b1ff;
+    --info-600: #008edf;
+    --info-700: #0071b4;
+    --info-800: #005f95;
+    --info-900: #004e7a;
+    --info-950: #002740;
+    /*  */
+    /* info-color */
+    --error-50: #fef2f2;
+    --error-100: #fef2f2;
+    --error-200: #fecaca;
+    --error-300: #fca5a5;
+    --error-400: #f87171;
+    --error-500: #ef4444;
+    --error-600: #dc2626;
+    --error-700: #b91c1c;
+    --error-800: #991b1b;
+    --error-900: #7f1d1d;
+    --error-950: #450a0a;
+    /*  */
+    /* warning-color */
+    --warning-50: #fff7ed;
+    --warning-100: #ffedd5;
+    --warning-200: #fed7aa;
+    --warning-300: #fdba74;
+    --warning-400: #fb923c;
+    --warning-500: #f97316;
+    --warning-600: #ea580c;
+    --warning-700: #c2410c;
+    --warning-800: #9a3412;
+    --warning-900: #7c2d12;
+    --warning-950: #431407;
+    /*  */
+    --primary: var(--info-950);
+    --primary-1: #e7ecf1;
+    --secondary: var(--neutral-600);
+    --brand-color: #26ba73;
+    --font-sora: "Sora", sans-serif;
+    --background-primary: #ffffff;
+    --bg-brand-subtle: var(--brand-500);
+  }
+
+  .dark {
+    --alpha-90: #2f3237e5;
+    /* brand-color */
+    --brand-50: #0e462f;
+    --brand-100: #105538;
+    --brand-200: #106c44;
+    --brand-300: #158652;
+    --brand-400: #26ba73;
+    --brand-500: #45c281;
+    --brand-600: #7bdaa6;
+    --brand-700: #afebc6;
+    --brand-800: #d5f6e0;
+    --brand-900: #eefbf3;
+    --brand-950: #ffffff;
+    /*  */
+    /* neutral-color */
+    --neutral-50: #35373d;
+    --neutral-100: #41454b;
+    --neutral-200: #55585f;
+    --neutral-300: #676b73;
+    --neutral-400: #797e87;
+    --neutral-500: #8c919b;
+    --neutral-600: #9fa4af;
+    --neutral-700: #b1b7c3;
+    --neutral-800: #c3cad7;
+    --neutral-900: #d7ddeb;
+    --neutral-950: #ffffff;
+    /*  */
+    /* info-color */
+    --info-50: #112545;
+    --info-100: #15325b;
+    --info-200: #15417e;
+    --info-300: #1554ad;
+    --info-400: #1668dc;
+    --info-500: #3c89e8;
+    --info-600: #65a9f3;
+    --info-700: #8dc5f8;
+    --info-800: #b7dcfa;
+    --info-900: #daeeff;
+    --info-950: #002740;
+    /*  */
+    /* info-color */
+    --error-50: #431418;
+    --error-100: #58181c;
+    --error-200: #791a1f;
+    --error-300: #a61d24;
+    --error-400: #d32029;
+    --error-500: #e84749;
+    --error-600: #f37370;
+    --error-700: #f89f9a;
+    --error-800: #fac8c3;
+    --error-900: #ffe2df;
+    --error-950: #450a0a;
+    /*  */
+    /* warning-color */
+    --warning-50: #441d12;
+    --warning-100: #592716;
+    --warning-200: #7c3118;
+    --warning-300: #aa3e19;
+    --warning-400: #d84a1b;
+    --warning-500: #e87040;
+    --warning-600: #f3956a;
+    --warning-700: #f8b692;
+    --warning-800: #fad4bc;
+    --warning-900: #7c2d12;
+    --warning-950: #ffe9db;
+    /*  */
+    --primary: var(--neutral-950);
+    --secondary: var(--neutral-600);
+    --brand-color: #26ba73;
+    --font-sora: "Sora";
+    --background-primary: #2f3237;
+    --bg-brand-subtle: var(--brand-50);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.scroll-custom {
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e7ecf1;
+    border-radius: 6px;
+    transition: all 300ms;
+  }
+}
+
+.search-bar-text-gradient {
+  background: -webkit-linear-gradient(#26ba73, #0193de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background: linear-gradient(91.9deg, #26ba73 60.75%, #0193de 106.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tgme_widget_login_button {
+  width: 10px !important;
+}
+
+html,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+ui,
+div {
+  font-family: var(--font-sora) !important;
+}
+
+body {
+  font-family: var(--font-sora) !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.date-picker {
+  @apply rounded-full cursor-pointer placeholder-neutral-300 w-[250px] border focus:border-brand-500 focus:outline-none border-neutral-100 px-4 bg-background-primary h-10 text-primary text-[14px] font-semibold;
+}
+
+.date-picker.button {
+  right: 10px !important;
+}
+
+.date-picker::placeholder {
+  @apply text-[14px] font-normal;
+}

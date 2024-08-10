@@ -1,0 +1,28 @@
+.ton-custom button {
+  background-color: var(--brand-500);
+  padding: 8px 16px;
+  gap: 8px;
+  box-shadow: none;
+
+  &:hover {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.ton-custom button > div {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: white;
+  font-family: var(--font-sora) !important;
+}
+
+.ton-custom button > svg {
+  width: 20px;
+  height: 20px;
+}
+.ton-custom button > svg > path {
+  fill: white;
+}

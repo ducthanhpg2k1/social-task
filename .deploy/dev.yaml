@@ -1,0 +1,13 @@
+targetPort: 80
+
+ingress:
+  enable: true
+  host: escrow-market-admin-dev.uslab.dev
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "200Mi"
+  limits:
+    cpu: "500m"
+    memory: "1000Mi"

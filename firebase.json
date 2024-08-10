@@ -1,0 +1,34 @@
+{
+  "hosting": [
+    {
+      "target": "whales-market-admin-mainnet",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "/",
+          "destination": "/index.html"
+        },
+        {
+          "source": "/banner",
+          "destination": "/banner.html"
+        }
+      ]
+    },
+    {
+      "target": "whales-market-admin-testing",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "/",
+          "destination": "/index.html"
+        },
+        {
+          "source": "/banner",
+          "destination": "/banner.html"
+        }
+      ]
+    }
+  ]
+}

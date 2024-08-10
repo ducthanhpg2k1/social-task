@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "lootbot-392011"
+  },
+  "targets": {
+    "lootbot-392011": {
+      "hosting": {
+        "whales-market-admin-mainnet": [
+          "whales-market-admin-mainnet"
+        ],
+        "whales-market-admin-testing": [
+                  "whales-market-admin-testing"
+                ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,17 @@
+.git
+.github
+.vscode
+.husky
+.idea
+.firebase
+.results
+.deploy
+scripts
+*Dockerfile*
+node_modules
+cloudbuild-staging.yaml
+cloudbuild-testing.yaml
+firebase-debug.log
+.firebaserc
+README.md
+out
