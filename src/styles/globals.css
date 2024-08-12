@@ -72,7 +72,7 @@
     --warning-900: #7c2d12;
     --warning-950: #431407;
     /*  */
-    --primary: var(--info-950);
+    --primary: #171627;
     --primary-1: #e7ecf1;
     --secondary: var(--neutral-600);
     --brand-color: #26ba73;
@@ -234,4 +234,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .date-picker::placeholder {
   @apply text-[14px] font-normal;
+}
+
+.bg-header-landing-page {
+  background: linear-gradient(#006fe8 100%, #8c37b2 100%, #ec53b0 100%);
 }

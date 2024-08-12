@@ -1,12 +1,12 @@
 "use client";
-import Dashboard from "@/application/_components/Dashboard";
-import MainLayout from "@/components/layouts/MainLayout";
 
-const DashboardPage = () => {
+import LangdingPage from "@/application/_components/LangdingPage";
+
+const HomePage = () => {
   return (
-    <MainLayout>
-      <Dashboard />
-    </MainLayout>
+    <>
+      <LangdingPage />
+    </>
   );
 };
-export default DashboardPage;
+export default HomePage;
