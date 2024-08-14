@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./index.scss";
+
 /* @import url("https://fonts.cdnfonts.com/css/sora-3?styles=80874,80875,80870,80871"); */
 
 @layer base {
@@ -238,4 +240,37 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .bg-header-landing-page {
   background: linear-gradient(#006fe8 100%, #8c37b2 100%, #ec53b0 100%);
+}
+
+.borderDashed {
+  position: relative;
+  padding: 2px;
+}
+
+.borderDashed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fcef9f 50%, transparent 50%) repeat-x,
+    linear-gradient(to bottom, #fcef9f 50%, transparent 50%) repeat-y,
+    linear-gradient(to right, #fcef9f 50%, transparent 50%) repeat-x,
+    linear-gradient(to bottom, #fcef9f 50%, transparent 50%) repeat-y;
+  background-size: 20px 2px, 2px 20px, 20px 2px, 2px 20px;
+}
+
+.bg-testimonials {
+  background-image: url("/images/homepage/bg-testimonials.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.bg-ready {
+  background-image: url("/images/homepage/bg-start-join.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 }

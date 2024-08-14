@@ -1,6 +1,7 @@
 import { IconMessageChat } from "@/components/ui/icons";
 import Text from "@/components/ui/Text";
 import { Button } from "@nextui-org/react";
+import clsx from "clsx";
 import Image from "next/image";
 
 const MENUS = [
@@ -26,9 +27,13 @@ const MENUS = [
   },
 ];
 
-const HeaderHome = () => {
+const HeaderHome = ({ scrollY }: { scrollY: number }) => {
   return (
-    <div className="w-8/12 m-auto flex justify-between py-6 px-0 border-b border-b-white/5">
+    <div
+      className={clsx("w-8/12 m-auto flex justify-between py-6 px-0 border-b border-b-white/5", {
+        ["border-none"]: scrollY > 0,
+      })}
+    >
       <Image src={"/images/logo.png"} alt="logo" className="cursor-pointer w-10 h-8" width={40} height={32} />
       <MenuHeader />
       <Button className="bg-transparent border-2 border-white/10 px-4 py-3 min-h-12">

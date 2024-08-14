@@ -22,6 +22,12 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        dotted: "radial-gradient(circle, #4a5568 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "dot-size": "8px 8px",
+      },
       fontFamily: {
         sora: "var(--font-sora)",
       },
